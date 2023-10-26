@@ -32,23 +32,23 @@ if(isset($_POST['edit'])) {
     <form method="post" action="">
         <div class="mb-3">
             <label class="form-label">Nama Mahasiswa</label>
-            <input type="text" class="form-control" name="nama" value="<?= $data['nama_mhs'] ?>">
+            <input type="text" class="form-control" name="nama" value="<?= $data['nama_mhs'] ?>" required>
         </div>
         <div class="mb-3">
             <label class="form-label">NPM</label>
-            <input type="number" class="form-control" name="npm" value="<?= $data['npm'] ?>">
+            <input type="number" class="form-control" name="npm" value="<?= $data['npm'] ?>" required>
         </div>
         <div class="mb-3">
             <label class="form-label">Email</label>
-            <input type="text" class="form-control" name="email" value="<?= $data['email'] ?>">
+            <input type="email" class="form-control" name="email" value="<?= $data['email'] ?>" required>
         </div>
         <div class="mb-3">
             <label class="form-label">Usia</label>
-            <input type="number" class="form-control" name="usia" value="<?= $data['usia'] ?>">
+            <input type="number" class="form-control" name="usia" value="<?= $data['usia'] ?>" required>
         </div>
         <div class="mb-3">
             <label class="form-label">Program Studi</label>
-            <select name="prodi" class="form-control">
+            <select name="prodi" class="form-control" required>
                 <?php 
                 $data = query("SELECT * from program_studi");
                 foreach ($data as $prodi) :

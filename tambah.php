@@ -4,12 +4,12 @@ $data = query("SELECT * from program_studi");
 if(isset($_POST['kirim'])) {
     if(tambah($_POST) > 0 ) {
         echo "<script>
-                alert('Data berhasil diubah!')
+                alert('Data berhasil ditambah!')
                 window.location.href = 'admin.php'
         </script>";
     }else {
         echo "<script>
-                alert('Data  tidak berhasil diubah!')
+                alert('Data  tidak berhasil ditambah!')
                 window.location.href = 'admin.php'
         </script>";
     }
@@ -31,23 +31,23 @@ if(isset($_POST['kirim'])) {
     <form method="post" action="">
         <div class="mb-3">
             <label class="form-label">Nama Mahasiswa</label>
-            <input type="text" class="form-control" name="nama">
+            <input type="text" class="form-control" required name="nama">
         </div>
         <div class="mb-3">
             <label class="form-label">NPM</label>
-            <input type="number" class="form-control" name="npm">
+            <input type="number" class="form-control" required name="npm">
         </div>
         <div class="mb-3">
             <label class="form-label">Email</label>
-            <input type="text" class="form-control" name="email">
+            <input type="email" class="form-control" required name="email">
         </div>
         <div class="mb-3">
             <label class="form-label">Usia</label>
-            <input type="number" class="form-control" name="usia">
+            <input type="number" class="form-control" required name="usia">
         </div>
         <div class="mb-3">
             <label class="form-label">Program Studi</label>
-            <select name="prodi" class="form-control">
+            <select name="prodi" class="form-control" required>
                 <?php foreach ($data as $prodi) : ?>
                 <option value="<?= $prodi['kode_prodi'] ?>"><?= $prodi['nama_prodi'] ?></option>
                 <?php endforeach; ?>
