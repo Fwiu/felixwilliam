@@ -50,4 +50,23 @@ function edit($data){
     return mysqli_affected_rows($conn);
 }
 
+function hapus($data){
+    global $conn;
+
+    $id_mhs = $_GET['id'];
+
+    $query = "DELETE from mahasiswa where id_mhs = $id_mhs";
+
+    mysqli_query($conn, $query);
+
+    return mysqli_affected_rows($conn);
+}
+
+function cari($keyword){
+    
+    $query = "SELECT * from mahasiswa where npm like '%$keyword%'";
+
+    return query($query);
+}
+
 ?>

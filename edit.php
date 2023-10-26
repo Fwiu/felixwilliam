@@ -1,7 +1,7 @@
 <?php 
 require 'config.php';
 $id = $_GET['id'];
-$data = query("SELECT * from mahasiswa")[0];
+$data = query("SELECT * from mahasiswa where id_mhs = $id")[0];
 if(isset($_POST['edit'])) {
     if(edit($_POST) > 0 ) {
         echo "<script>
@@ -58,6 +58,7 @@ if(isset($_POST['edit'])) {
             </select>
         </div>
         <button type="submit" class="btn btn-primary" name="edit">Submit</button>
+        <a href="admin.php" class="btn btn-secondary">Balik</a>
     </form>
 </div>
 

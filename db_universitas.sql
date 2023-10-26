@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Okt 2023 pada 16.25
+-- Waktu pembuatan: 26 Okt 2023 pada 11.29
 -- Versi server: 10.4.25-MariaDB
 -- Versi PHP: 8.1.10
 
@@ -41,12 +41,11 @@ CREATE TABLE `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`id_mhs`, `nama_mhs`, `npm`, `email`, `usia`, `kode_prodi`) VALUES
-(1, 'Shaka', 142412312, 'ahmadramadhani252@gmail.com', 18, 'P001'),
-(2, 'Shaka', 142412312, 'ahmadramadhani252@gmail.com', 18, 'P001'),
-(3, 'Shaka', 142412312, 'ahmadramadhani252@gmail.com', 18, 'P001'),
-(4, 'Shaka', 142412312, 'ahmadramadhani252@gmail.com', 18, 'P001'),
-(5, 'Shaka', 142412312, 'ahmadramadhani252@gmail.com', 18, 'P001'),
-(6, 'Pengacau', 142412312, 'ahmadramadhani252@gmail.com', 18, 'P001');
+(1, 'Andrew Sanjaya Cuandra', 91209123, 'andrewsanjayacuandra202@gmail.com', 18, 'P005'),
+(2, 'Andre Manalu', 582821, 'andremanalu334@gmail.com', 18, 'P001'),
+(3, 'Ahmad Ramadhani', 2147483647, 'ahmadramadhani252@gmail.com', 18, 'P004'),
+(4, 'Felix William', 125912939, 'williamfelix10120@gmail.com', 18, 'P002'),
+(5, 'Danu Yudistira Yudistia', 29109124, 'danuyudistuyudisi@gmail.com', 18, 'P003');
 
 -- --------------------------------------------------------
 

@@ -1,6 +1,11 @@
 <?php 
 require 'config.php';
+
 $data = query("SELECT * from mahasiswa");
+
+if(isset($_POST['cari'])) {
+    $data = cari($_POST['keyword']);
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -15,12 +20,20 @@ $data = query("SELECT * from mahasiswa");
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme='dark'>
-    <div class="container">
+    <div class="container d-flex align-items-center col-12">
+        <div class="col-5">
         <a class="navbar-brand" href="#">UNIV PUSAT KEUNGGULAN</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        </div>
+        <div class="col-4">
+        <form class="d-flex" role="search" method="post" action="">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
+        <button class="btn btn-outline-success" type="submit" name="cari">Search</button>
+        </form>
+        </div>
+        <div class="collapse navbar-collapse col-3" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.php">Home</a>
